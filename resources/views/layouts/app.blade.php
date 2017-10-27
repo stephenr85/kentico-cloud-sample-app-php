@@ -14,25 +14,25 @@
                     <nav role="navigation">
                         <ul>
                             <li>
-                            	<a href="/">@lang('Home')</a>
+                            	<a href="/">@lang('dancinggoat.Home')</a>
                             </li>
                             <li>
-                            	<a href="/product-catalog">@lang('Coffees')</a>
+                            	<a href="/product-catalog">@lang('dancinggoat.Coffees')</a>
                             </li>
                             <li>
-                            	<a href="/articles">@lang('Articles')</a>
+                            	<a href="/articles">@lang('dancinggoat.Articles')</a>
                             </li>
                             <li>
-                            	<a href="/about">@lang('About')</a>
+                            	<a href="/about">@lang('dancinggoat.About')</a>
                             </li>
                             <li>
-                            	<a href="/cafes">@lang('Cafes')</a>
+                            	<a href="/cafes">@lang('dancinggoat.Cafes')</a>
                             </li>
                             <li>
-                            	<a href="/contact">@lang('Contacts')</a>
+                            	<a href="/contact">@lang('dancinggoat.Contact')</a>
                             </li>
                             <li>
-                            	<a href="/partnership">@lang('Partnership')</a>
+                            	<a href="/partnership">@lang('dancinggoat.Partnership')</a>
                             </li>
                         </ul>
                     </nav>
@@ -40,10 +40,10 @@
                         <nav role="navigation">
                             <ul class="dropdown-items-list dropdown-desktop-visible">
                                 <li>
-                                	<a href="?language=en-us">@lang('English')</a>
+                                	<a href="?language=en-us">English</a>
                                 </li>
                                 <li>
-                                	<a href="?language=es-es">@lang('Español')</a>
+                                	<a href="?language=es-es">Español</a>
                                 </li>
                             </ul>
                         </nav>
