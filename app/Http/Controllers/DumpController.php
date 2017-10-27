@@ -8,7 +8,10 @@ class DumpController extends Controller
 {
     public function item($codename){
     	$client = app()->make('DeliverClient');
-    	$item = $client->getItem($codename);
+    	$item = $client->getItem([
+    		'system.codename' => $codename,
+    		'depth' => 1
+    	]);
 
     	dd($item);
     }

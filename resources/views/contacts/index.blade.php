@@ -6,7 +6,7 @@
 <div class="col-md-12">
     <h2 class="contact-title">@lang('dancinggoat.Roastery')</h2>
     <ul class="contact-info">
-        <li>{{ $roastery->getString('phone') }}</li>
+        <li><a href="tel:{{ $roastery->getString('phone') }}">{{ $roastery->getString('phone') }}</a></li>
         <li>{{ $roastery->getString('email') }}</li>
         <li>
             <a href="javascript:void(0)" data-address="{{ $roastery->getString('city') . ', ' . $roastery->getString('street') }}" class="js-scroll-to-map">
