@@ -95,14 +95,15 @@
         </footer>
     </div>
 
-    atScripts.Render("~/bundles/jquery")
-    atScripts.Render("~/bundles/jqueryval")
+    <script src="{{ asset('js/jquery-3.1.1.js') }}"></script>
+    <script src="{{ asset('js/jquery.validate.js') }}"></script>
+    <script src="{{ asset('js/jquery.validate.unobtrusive.js') }}"></script>
 
     @yield('scripts')
 
     <script type="text/javascript">
         !function(){var a='https://engage-ket.kenticocloud.com/js',b=document,c=b.createElement('script'),d=b.getElementsByTagName('script')[0];c.type='text/javascript',c.async=!0,c.defer=!0,c.src=a+'?d='+document.domain,d.parentNode.insertBefore(c,d)}(),window.ket=window.ket||function(){(ket.q=ket.q||[]).push(arguments)};
-        ket('start', '@ConfigurationManager.AppSettings["ProjectId"]');
+        ket('start', '{{ $engage_project_id }}');
     </script>
 </body>
 </html>

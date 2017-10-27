@@ -150,7 +150,9 @@ return [
 	/*
 	'Order_Questions' => '',
 	'Order_Success' => '',
-	'PartnerCafes_Title' => '',
+	*/
+	'PartnerCafes_Title' => 'Other places where you can drink our coffee',
+	/*
 	'Partnership' => '',
 	'Partnership_ApplicationText' => '',
 	'Partnership_ApplicationTitle' => '',

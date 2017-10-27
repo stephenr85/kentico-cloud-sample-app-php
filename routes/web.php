@@ -12,3 +12,12 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+Route::get('/about', 'AboutController@index');
+
+Route::get('/articles', 'ArticlesController@index');
+Route::get('/articles/show/{codename}', 'ArticlesController@detail');
+
+Route::get('/cafes', 'CafesController@index');
+
+Route::get('/dump/item/{codename}', 'DumpController@item');

@@ -10,7 +10,7 @@
     <!-- Feature Article -->
     <div class="article-tile article-tile-large">
         <div class="col-md-12 col-lg-6">
-            <a href="/articles/{{ $feature_article->system->codename }}">
+            <a href="/articles/show/{{ $feature_article->system->codename }}">
             	<img src="{{ $feature_article->getElementValue('teaser_image')[0]->url }}" class="article-tile-image">
             </a>
         </div>
@@ -20,7 +20,7 @@
             </div>
             <div class="article-tile-content">
                 <h2>
-                    <a href="/articles/{{ $feature_article->system->codename }}">{{ $feature_article->getString('title') }}</a>
+                    <a href="/articles/show/{{ $feature_article->system->codename }}">{{ $feature_article->getString('title') }}</a>
                 </h2>
                 <p class="article-tile-text lead-paragraph">
                     {{ $feature_article->getString('summary') }}
@@ -32,24 +32,7 @@
     <!-- Articles -->
     @foreach ($articles as $article)
     	
-    	<div class="col-md-3">
-		    <div class="article-tile">
-		        <a href="/articles/{{ $article->system->codename }}">
-		            <img alt="{{ $article->getElementValue('teaser_image')[0]->description }}" class="article-tile-image" src="{{ $article->getElementValue('teaser_image')[0]->url }}" title="{{ $article->getElementValue('teaser_image')[0]->description }}">
-		        </a>
-		        <div class="article-tile-date">
-		            {{ date('F j', $article->getDateTime('post_date')) }}
-		        </div>
-		        <div class="article-tile-content">
-		            <h2 class="h4">
-		                <a href="/articles/{{ $article->system->codename }}">{{ $article->getString('title') }}</a>
-		            </h2>
-		            <p class="article-tile-text">
-		                {{ $article->getString('summary') }}
-		            </p>
-		        </div>
-		    </div>
-		</div>
+    	@include('articles._article_teaser', compact('article'))
 
     @endforeach
     <div class="row">

@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
         $homeData = $client->getItem('home');
 
         view()->share('company_address', $homeData->getString('contact'));
+
+        view()->share('engage_project_id', 'ace71be0-4898-4e7f-b0b6-f416080e5b8b');
+
+        view()->share('google_maps_key', 'AIzaSyAVOq4C-rf7JVeHt6ws9vsf-KHIRpueASg');
     }
 
     /**
