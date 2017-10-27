@@ -13,7 +13,7 @@
     </div>
     <div class="row">
         <div class="article-detail-content">
-            {!! $article->getString('body_copy') !!}
+            {!! deliver_rich_text($article->getString('body_copy')) !!}
         </div>
     </div>
 </article>

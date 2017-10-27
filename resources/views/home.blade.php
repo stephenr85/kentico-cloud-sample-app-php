@@ -48,7 +48,7 @@
         <h1 class="title-tab">@lang('dancinggoat.Story_Title')</h1>
         <div class="col-sm-12">
             <div class="ourstory-section center-text" style="background-image: url('{{ $our_story->getElementValue('image')[0]->url }}');">
-                {!! $our_story->getString('description') !!}
+                {!! deliver_rich_text($our_story->getString('description')) !!}
             </div>
         </div>
     </div>
