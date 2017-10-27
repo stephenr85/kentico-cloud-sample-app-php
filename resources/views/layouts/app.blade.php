@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head id="head">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>@yield('title') - Dancing Goat</title>
+    <link href="{{ asset('/css/Site.css') }}" rel="stylesheet">
+</head>
+<div class="page-wrap">
+        <header class="header" role="banner">
+            <div class="menu">
+                <div class="container">
+                    <nav role="navigation">
+                        <ul>
+                            <li>
+                            	<a href="/">@lang('Home')</a>
+                            </li>
+                            <li>
+                            	<a href="/product-catalog">@lang('Coffees')</a>
+                            </li>
+                            <li>
+                            	<a href="/articles">@lang('Articles')</a>
+                            </li>
+                            <li>
+                            	<a href="/about">@lang('About')</a>
+                            </li>
+                            <li>
+                            	<a href="/cafes">@lang('Cafes')</a>
+                            </li>
+                            <li>
+                            	<a href="/contact">@lang('Contacts')</a>
+                            </li>
+                            <li>
+                            	<a href="/partnership">@lang('Partnership')</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="additional-menu-buttons user-menu">
+                        <nav role="navigation">
+                            <ul class="dropdown-items-list dropdown-desktop-visible">
+                                <li>
+                                	<a href="?language=en-us">@lang('English')</a>
+                                </li>
+                                <li>
+                                	<a href="?language=es-es">@lang('Español')</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="message-box" class="container message">
+                @yield('messages')
+            </div>
+            <div class="header-row">
+                <div class="container">
+                    <div class="col-xs-8 col-md-8 col-lg-4 logo">
+                        <h1 class="logo">
+                            <a href="/" class="logo-link">Dancing Goat</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            @yield('body')
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <footer role="contentinfo">
+            <div class="footer-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 footer-col">
+                            <p>
+                                {!! $company_address !!}
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-lg-4 footer-col">
+                            <h3>@lang('dancinggoat.FollowUs_Title')</h3>
+                            <a class="followus-link" href="https://www.facebook.com/Dancing.Goat" target="_blank">
+                                <img alt="@lang('dancinggoat.FollowUsOnFacebook')" class="" src="{{ asset('images/facebook-icon.png') }}" title="@lang('dancinggoat.FollowUsOnFacebook')">
+                            </a>
+                            <a class="followus-link" href="https://twitter.com/DancingGoat78" target="_blank">
+                                <img alt="@lang('dancinggoat.FollowUsOnTwitter')" class="" src="{{ asset('images/twitter-icon.png') }}" title="@lang('dancinggoat.FollowUsOnTwitter')">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                Copyright &copy; {{ date('Y') }} Dancing Goat. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    atScripts.Render("~/bundles/jquery")
+    atScripts.Render("~/bundles/jqueryval")
+
+    @yield('scripts')
+
+    <script type="text/javascript">
+        !function(){var a='https://engage-ket.kenticocloud.com/js',b=document,c=b.createElement('script'),d=b.getElementsByTagName('script')[0];c.type='text/javascript',c.async=!0,c.defer=!0,c.src=a+'?d='+document.domain,d.parentNode.insertBefore(c,d)}(),window.ket=window.ket||function(){(ket.q=ket.q||[]).push(arguments)};
+        ket('start', '@ConfigurationManager.AppSettings["ProjectId"]');
+    </script>
+</body>
+</html>
