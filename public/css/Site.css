@@ -5794,6 +5794,9 @@ footer {
   background-position: 100% 100%;
   font-size: 1.3rem;
 }
+.ourstory-section a {
+  color: inherit;
+}
 .cafe-overlay {
   background-color: rgba(0, 0, 0, 0.4);
   display: block;
