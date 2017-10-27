@@ -20,4 +20,6 @@ Route::get('/articles/show/{codename}', 'ArticlesController@detail');
 
 Route::get('/cafes', 'CafesController@index');
 
+Route::get('/contacts', 'ContactsController@index');
+
 Route::get('/dump/item/{codename}', 'DumpController@item');

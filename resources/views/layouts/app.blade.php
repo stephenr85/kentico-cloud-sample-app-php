@@ -23,13 +23,13 @@
                             	<a href="/articles">@lang('dancinggoat.Articles')</a>
                             </li>
                             <li>
-                            	<a href="/about">@lang('dancinggoat.About')</a>
+                            	<a href="/about">@lang('dancinggoat.AboutUs')</a>
                             </li>
                             <li>
                             	<a href="/cafes">@lang('dancinggoat.Cafes')</a>
                             </li>
                             <li>
-                            	<a href="/contact">@lang('dancinggoat.Contact')</a>
+                            	<a href="/contacts">@lang('dancinggoat.Contact')</a>
                             </li>
                             <li>
                             	<a href="/partnership">@lang('dancinggoat.Partnership')</a>

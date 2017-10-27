@@ -213,7 +213,9 @@ return [
 	'Register_PasswordConfirmation_Empty' => '',
 	'Register_PasswordConfirmation_Invalid' => '',
 	'Register_Subheading' => '',
-	'Roastery' => '',
+	*/
+	'Roastery' => 'Roastery',
+	/*
 	'Search_NoResults' => '',
 	'Search_ResultsFor' => '',
 	'Shipping_NotApplicable' => '',
