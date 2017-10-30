@@ -22,4 +22,7 @@ Route::get('/cafes', 'CafesController@index');
 
 Route::get('/contacts', 'ContactsController@index');
 
+Route::any('/partnership', 'PartnershipController@index');
+
+/* DEBUGGING ONLY */
 Route::get('/dump/item/{codename}', 'DumpController@item');
