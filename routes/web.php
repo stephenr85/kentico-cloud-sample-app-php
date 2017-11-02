@@ -24,5 +24,16 @@ Route::get('/contacts', 'ContactsController@index');
 
 Route::any('/partnership', 'PartnershipController@index');
 
+Route::get('/product-catalog', 'ProductsController@index');
+
+Route::get('/product-catalog/detail/{codename}', 'ProductsController@detail')->name('product.detail');
+
+Route::get('/product-catalog/coffees', 'CoffeesController@index');
+Route::get('/product-catalog/coffees/filter', 'CoffeesController@filter')->name('products.coffees.filter');
+
 /* DEBUGGING ONLY */
+Route::get('/dump/items', 'DumpController@items');
 Route::get('/dump/item/{codename}', 'DumpController@item');
+
+Route::get('/dump/taxonomies', 'DumpController@taxonomies');
+Route::get('/dump/taxonomy/{codename}', 'DumpController@taxonomy');

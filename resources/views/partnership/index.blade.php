@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $meta_title)
+@section('meta_title', $meta_title)
 
 @section('body')
 <div class="row">

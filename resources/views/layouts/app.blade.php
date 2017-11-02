@@ -4,100 +4,104 @@
 <head id="head">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <title>@yield('title') - Dancing Goat</title>
+    <title>@yield('meta_title') - Dancing Goat</title>
     <link href="{{ asset('/css/Site.css') }}" rel="stylesheet">
 </head>
-<div class="page-wrap">
-        <header class="header" role="banner">
-            <div class="menu">
-                <div class="container">
-                    <nav role="navigation">
-                        <ul>
-                            <li>
-                            	<a href="/">@lang('dancinggoat.Home')</a>
-                            </li>
-                            <li>
-                            	<a href="/product-catalog">@lang('dancinggoat.Coffees')</a>
-                            </li>
-                            <li>
-                            	<a href="/articles">@lang('dancinggoat.Articles')</a>
-                            </li>
-                            <li>
-                            	<a href="/about">@lang('dancinggoat.AboutUs')</a>
-                            </li>
-                            <li>
-                            	<a href="/cafes">@lang('dancinggoat.Cafes')</a>
-                            </li>
-                            <li>
-                            	<a href="/contacts">@lang('dancinggoat.Contact')</a>
-                            </li>
-                            <li>
-                            	<a href="/partnership">@lang('dancinggoat.Partnership')</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="additional-menu-buttons user-menu">
+<body>
+    <div id="app">
+        <div class="page-wrap">
+            <header class="header" role="banner">
+                <div class="menu">
+                    <div class="container">
                         <nav role="navigation">
-                            <ul class="dropdown-items-list dropdown-desktop-visible">
+                            <ul>
                                 <li>
-                                	<a href="?language=en-us">English</a>
+                                	<a href="/">@lang('dancinggoat.Home')</a>
                                 </li>
                                 <li>
-                                	<a href="?language=es-es">Español</a>
+                                	<a href="/product-catalog">@lang('dancinggoat.Coffees')</a>
+                                </li>
+                                <li>
+                                	<a href="/articles">@lang('dancinggoat.Articles')</a>
+                                </li>
+                                <li>
+                                	<a href="/about">@lang('dancinggoat.AboutUs')</a>
+                                </li>
+                                <li>
+                                	<a href="/cafes">@lang('dancinggoat.Cafes')</a>
+                                </li>
+                                <li>
+                                	<a href="/contacts">@lang('dancinggoat.Contact')</a>
+                                </li>
+                                <li>
+                                	<a href="/partnership">@lang('dancinggoat.Partnership')</a>
                                 </li>
                             </ul>
                         </nav>
+                        <div class="additional-menu-buttons user-menu">
+                            <nav role="navigation">
+                                <ul class="dropdown-items-list dropdown-desktop-visible">
+                                    <li>
+                                    	<a href="?language=en-us">English</a>
+                                    </li>
+                                    <li>
+                                    	<a href="?language=es-es">Español</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="message-box" class="container message">
-                @yield('messages')
-            </div>
-            <div class="header-row">
-                <div class="container">
-                    <div class="col-xs-8 col-md-8 col-lg-4 logo">
-                        <h1 class="logo">
-                            <a href="/" class="logo-link">Dancing Goat</a>
-                        </h1>
+                <div id="message-box" class="container message">
+                    @yield('messages')
+                </div>
+                <div class="header-row">
+                    <div class="container">
+                        <div class="col-xs-8 col-md-8 col-lg-4 logo">
+                            <h1 class="logo">
+                                <a href="/" class="logo-link">Dancing Goat</a>
+                            </h1>
+                        </div>
                     </div>
                 </div>
+            </header>
+            <div class="container">
+                @yield('body')
             </div>
-        </header>
-        <div class="container">
-            @yield('body')
         </div>
-    </div>
-    <div class="footer-wrapper">
-        <footer role="contentinfo">
-            <div class="footer-container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-lg-4 footer-col">
-                            <p>
-                                {!! $company_address !!}
-                            </p>
-                        </div>
-                        <div class="col-md-4 col-lg-4 footer-col">
-                            <h3>@lang('dancinggoat.FollowUs_Title')</h3>
-                            <a class="followus-link" href="https://www.facebook.com/Dancing.Goat" target="_blank">
-                                <img alt="@lang('dancinggoat.FollowUsOnFacebook')" class="" src="{{ asset('images/facebook-icon.png') }}" title="@lang('dancinggoat.FollowUsOnFacebook')">
-                            </a>
-                            <a class="followus-link" href="https://twitter.com/DancingGoat78" target="_blank">
-                                <img alt="@lang('dancinggoat.FollowUsOnTwitter')" class="" src="{{ asset('images/twitter-icon.png') }}" title="@lang('dancinggoat.FollowUsOnTwitter')">
-                            </a>
+        <div class="footer-wrapper">
+            <footer role="contentinfo">
+                <div class="footer-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4 footer-col">
+                                <p>
+                                    {!! $company_address !!}
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-4 footer-col">
+                                <h3>@lang('dancinggoat.FollowUs_Title')</h3>
+                                <a class="followus-link" href="https://www.facebook.com/Dancing.Goat" target="_blank">
+                                    <img alt="@lang('dancinggoat.FollowUsOnFacebook')" class="" src="{{ asset('images/facebook-icon.png') }}" title="@lang('dancinggoat.FollowUsOnFacebook')">
+                                </a>
+                                <a class="followus-link" href="https://twitter.com/DancingGoat78" target="_blank">
+                                    <img alt="@lang('dancinggoat.FollowUsOnTwitter')" class="" src="{{ asset('images/twitter-icon.png') }}" title="@lang('dancinggoat.FollowUsOnTwitter')">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container copyright">
-                Copyright &copy; {{ date('Y') }} Dancing Goat. All rights reserved.
-            </div>
-        </footer>
-    </div>
+                <div class="container copyright">
+                    Copyright &copy; {{ date('Y') }} Dancing Goat. All rights reserved.
+                </div>
+            </footer>
+        </div>
 
+    </div>
     <script src="{{ asset('js/jquery-3.1.1.js') }}"></script>
     <script src="{{ asset('js/jquery.validate.js') }}"></script>
     <script src="{{ asset('js/jquery.validate.unobtrusive.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
     @yield('scripts')
 
