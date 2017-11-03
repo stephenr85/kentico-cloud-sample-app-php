@@ -16,14 +16,23 @@ class DumpController extends Controller
     	dd($item);
     }
 
-    public function items(){
+    public function items(Request $request){
     	$client = app()->make('DeliverClient');
-    	$item = $client->getItems([
-    		//'system.codename' => $codename,
-    		//'depth' => 1
-    	]);
 
-    	dd($item);
+        $params = [];
+
+        foreach($request->all() as $key => $val){
+            if(preg_match('/^(system|element)_/', $key)){
+                $key = preg_replace('/^(system|element)_/', '$1.', $key);
+                $params[$key] = $val;
+            }else if(in_array($key, ['depth', 'limit'])){
+                $params[$key] = $val;
+            }
+        }
+     
+    	$items = $client->getItems($params);
+
+    	dd($items);
     }
 
     public function taxonomy($codename){

@@ -16,7 +16,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/about', 'AboutController@index');
 
 Route::get('/articles', 'ArticlesController@index');
-Route::get('/articles/show/{codename}', 'ArticlesController@detail');
+Route::get('/articles/show/{slug}', 'ArticlesController@detail');
 
 Route::get('/cafes', 'CafesController@index');
 
@@ -26,10 +26,13 @@ Route::any('/partnership', 'PartnershipController@index');
 
 Route::get('/product-catalog', 'ProductsController@index');
 
-Route::get('/product-catalog/detail/{codename}', 'ProductsController@detail')->name('product.detail');
+Route::get('/product-catalog/detail/{slug}', 'ProductsController@detail')->name('product.detail');
 
 Route::get('/product-catalog/coffees', 'CoffeesController@index');
 Route::get('/product-catalog/coffees/filter', 'CoffeesController@filter')->name('products.coffees.filter');
+
+Route::get('/product-catalog/brewers', 'BrewersController@index');
+Route::get('/product-catalog/brewers/filter', 'BrewersController@filter')->name('products.brewers.filter');
 
 /* DEBUGGING ONLY */
 Route::get('/dump/items', 'DumpController@items');

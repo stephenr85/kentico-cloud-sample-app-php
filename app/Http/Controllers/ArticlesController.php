@@ -21,10 +21,10 @@ class ArticlesController extends Controller
     	return view('articles.index', $viewData);
     }
 
-    public function detail($codename){
+    public function detail($slug){
     	$client = app()->make('DeliverClient');
 
-    	$article = $client->getItem($codename);
+    	$article = $client->getItem($slug);
 
     	$related_articles = $article->getModularContent('related_articles')->getItems();
 

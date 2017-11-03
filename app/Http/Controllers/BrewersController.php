@@ -4,34 +4,34 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CoffeesController extends Controller
+class BrewersController extends Controller
 {
 	public function index(){
 		$client = app()->make('DeliverClient');
 
 		$products = $client->getItems([
-			'system.type' => 'coffee'
+			'system.type' => 'brewer'
 		]);
 
 		$viewData = [
 			'products' => $products->getItems(),
-			'processings' => $client->getTaxonomy('processing'),
+			'manufacturers' => $client->getTaxonomy('manufacturer'),
 			'product_statuses' => $client->getTaxonomy('product_status')
 		];
 
-		return view('products.coffees.index', $viewData);
+		return view('products.brewers.index', $viewData);
 	}
 
 	public function filter(Request $request){
 		$client = app()->make('DeliverClient');
 
 		$params = [
-			'system.type' => 'coffee'
+			'system.type' => 'brewer'
 		];
 
-		$selected_processings = $request->input('processing');
-		if(count($selected_processings)){
-			$params['elements.processing[any]'] = implode(',', $selected_processings);
+		$selected_manufacturer = $request->input('manufacturer');
+		if(count($selected_manufacturer)){
+			$params['elements.manufacturer[any]'] = implode(',', $selected_manufacturer);
 		}
 
 		$selected_product_statuses = $request->input('product_status');
@@ -39,10 +39,10 @@ class CoffeesController extends Controller
 			$params['elements.product_status[any]'] = implode(',', $selected_product_statuses);
 		}
 
-		$products = $client->getItems($params);
+		$coffees = $client->getItems($params);
 
 		$viewData = [
-			'products' => $products->getItems()
+			'products' => $coffees->getItems()
 		];
 
 		return view('products._product_listing', $viewData);
