@@ -16,25 +16,25 @@
                         <nav role="navigation">
                             <ul>
                                 <li>
-                                	<a href="/">@lang('dancinggoat.Home')</a>
+                                	<a href="{{ route('home') }}">@lang('dancinggoat.Home')</a>
                                 </li>
                                 <li>
-                                	<a href="/product-catalog">@lang('dancinggoat.Coffees')</a>
+                                	<a href="{{ route('products') }}">@lang('dancinggoat.Coffees')</a>
                                 </li>
                                 <li>
-                                	<a href="/articles">@lang('dancinggoat.Articles')</a>
+                                	<a href="{{ route('articles') }}">@lang('dancinggoat.Articles')</a>
                                 </li>
                                 <li>
-                                	<a href="/about">@lang('dancinggoat.AboutUs')</a>
+                                	<a href="{{ route('about') }}">@lang('dancinggoat.AboutUs')</a>
                                 </li>
                                 <li>
-                                	<a href="/cafes">@lang('dancinggoat.Cafes')</a>
+                                	<a href="{{ route('cafes') }}">@lang('dancinggoat.Cafes')</a>
                                 </li>
                                 <li>
-                                	<a href="/contacts">@lang('dancinggoat.Contact')</a>
+                                	<a href="{{ route('contacts') }}">@lang('dancinggoat.Contact')</a>
                                 </li>
                                 <li>
-                                	<a href="/partnership">@lang('dancinggoat.Partnership')</a>
+                                	<a href="{{ route('partnership') }}">@lang('dancinggoat.Partnership')</a>
                                 </li>
                             </ul>
                         </nav>
@@ -42,10 +42,10 @@
                             <nav role="navigation">
                                 <ul class="dropdown-items-list dropdown-desktop-visible">
                                     <li>
-                                    	<a href="?language=en-us">English</a>
+                                    	<a href="?locale=en-us">English</a>
                                     </li>
                                     <li>
-                                    	<a href="?language=es-es">Español</a>
+                                    	<a href="?locale=es-es">Español</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -59,7 +59,7 @@
                     <div class="container">
                         <div class="col-xs-8 col-md-8 col-lg-4 logo">
                             <h1 class="logo">
-                                <a href="/" class="logo-link">Dancing Goat</a>
+                                <a href="{{ route('home') }}" class="logo-link">Dancing Goat</a>
                             </h1>
                         </div>
                     </div>

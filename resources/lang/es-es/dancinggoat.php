@@ -1,0 +1,21 @@
+<?php
+return [
+	'AboutUs' => 'Quiénes somos',
+	'Articles' => 'Artículos',
+	'Articles_LatestOne' => 'Último Artículo',
+	'Articles_More' => 'Más Artículos',
+	'Articles_RelatedArticles' => 'Artículos relacionados',
+	'Cafes' => 'Cafés',
+	'Cafes_MapTitle' => 'Encuentre la cafetería más cercana',
+	'Cafes_More' => 'Más cafés',
+	'CompanyCafes' => 'Probar nuestro café',
+	'CompanyCafes_Title' => 'Probar nuestro café ',
+	'Contact' => 'Contacto',
+	'ContactUs_MapTitle' => 'Pase por nuestros cafés',
+	'FollowUs_Title' => 'Síguenos',
+	'Home' => 'Inicio',
+	'PartnerCafes_Title' => 'Otros lugares donde puede tomar nuestro café',
+	'Partnership' => 'Afiliados',
+	'Store' => 'Tienda',
+	'Story_WholeStory' => 'Más sobre nosotros',
+];

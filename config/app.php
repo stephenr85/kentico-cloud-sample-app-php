@@ -78,8 +78,9 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'en-us',
 
+    'locales' => ['en-us' => 'English', 'es-es' => 'Spanish'],
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -91,7 +92,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'en-us',
 
     /*
     |--------------------------------------------------------------------------

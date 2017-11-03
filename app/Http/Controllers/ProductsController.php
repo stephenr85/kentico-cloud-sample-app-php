@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-	public function index(){
-		return redirect('/product-catalog/coffees');
+	public function index(Request $request){
+		return redirect('/'.$request->segment(1).'/product-catalog/coffees');
 	}
 
 	public function detail($slug){

@@ -11,20 +11,20 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/about', 'AboutController@index');
+Route::get('/about', 'AboutController@index')->name('about');
 
-Route::get('/articles', 'ArticlesController@index');
+Route::get('/articles', 'ArticlesController@index')->name('articles');
 Route::get('/articles/show/{slug}', 'ArticlesController@detail');
 
-Route::get('/cafes', 'CafesController@index');
+Route::get('/cafes', 'CafesController@index')->name('cafes');
 
-Route::get('/contacts', 'ContactsController@index');
+Route::get('/contacts', 'ContactsController@index')->name('contacts');
 
-Route::any('/partnership', 'PartnershipController@index');
+Route::any('/partnership', 'PartnershipController@index')->name('partnership');
 
-Route::get('/product-catalog', 'ProductsController@index');
+Route::get('/product-catalog', 'ProductsController@index')->name('products');;
 
 Route::get('/product-catalog/detail/{slug}', 'ProductsController@detail')->name('product.detail');
 
