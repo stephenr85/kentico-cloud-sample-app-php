@@ -12,7 +12,7 @@ class AboutController extends Controller
 
     	$viewData = [
     		'about' => $aboutData,
-    		'facts' => $aboutData->getModularContent('facts')->getItems()
+    		'facts' => $aboutData->facts
     	];
 
     	return view('about.index', $viewData);

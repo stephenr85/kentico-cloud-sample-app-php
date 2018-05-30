@@ -14,8 +14,8 @@ class ArticlesController extends Controller
     		'system.type' => 'article'
     	]);
 
-    	$viewData = [
-    		'articles' => $articles
+        $viewData = [
+    		'articles' => $articles->items
     	];
 
     	return view('articles.index', $viewData);
@@ -26,7 +26,7 @@ class ArticlesController extends Controller
 
     	$article = $client->getItem($slug);
 
-    	$related_articles = $article->getModularContent('related_articles')->getItems();
+    	$related_articles = $article->relatedArticles;
 
     	$viewData = [
     		'article' => $article,
