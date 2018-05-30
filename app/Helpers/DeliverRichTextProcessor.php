@@ -32,14 +32,11 @@ class DeliverRichTextProcessor {
         $items = $this->client->getItems([
             'system.codename[in]' => implode(',', array_keys($itemObjects))
         ]);
-        //dd($items);
-        foreach($items as $item){
+
+        foreach($items->items as $item){
             $node = $itemObjects[$item->system->codename];
             $objectView = view('shared.rich_text_item._' . $item->system->type);
             $objectView->with('item', $item);
-            //dd($node);
-            //dd($item);
-            //dd($objectView->render());
             $node->replaceWith($objectView->render());
         }
 
@@ -52,8 +49,6 @@ class DeliverRichTextProcessor {
         });
 
         $result = $crawler->filter('#process-root')->html();
-
-        //dd($result);
 
         return $result;
     }
