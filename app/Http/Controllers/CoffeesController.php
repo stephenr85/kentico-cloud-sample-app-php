@@ -14,7 +14,7 @@ class CoffeesController extends Controller
 		]);
 
 		$viewData = [
-			'products' => $products->getItems(),
+			'products' => $products->items,
 			'processings' => $client->getTaxonomy('processing'),
 			'product_statuses' => $client->getTaxonomy('product_status')
 		];
@@ -42,7 +42,7 @@ class CoffeesController extends Controller
 		$products = $client->getItems($params);
 
 		$viewData = [
-			'products' => $products->getItems()
+			'products' => $products->items
 		];
 
 		return view('products._product_listing', $viewData);
