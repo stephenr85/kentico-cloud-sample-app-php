@@ -17,6 +17,7 @@ class ContactsController extends Controller
 		$cafes = $cafes->items;
 
 		$viewData = [
+			'meta_title' => "Contact",
 			'roastery' => reset($cafes),
 			'cafes' => $cafes
 		];

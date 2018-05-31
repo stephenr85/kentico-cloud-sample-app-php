@@ -14,6 +14,7 @@ class CoffeesController extends Controller
 		]);
 
 		$viewData = [
+			'meta_title' => "Coffees",
 			'products' => $products->items,
 			'processings' => $client->getTaxonomy('processing'),
 			'product_statuses' => $client->getTaxonomy('product_status')

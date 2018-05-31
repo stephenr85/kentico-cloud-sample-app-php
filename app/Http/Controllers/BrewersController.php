@@ -14,6 +14,7 @@ class BrewersController extends Controller
 		]);
 
 		$viewData = [
+			'meta_title' => "Brewers",
 			'products' => $products->items,
 			'manufacturers' => $client->getTaxonomy('manufacturer'),
 			'product_statuses' => $client->getTaxonomy('product_status')

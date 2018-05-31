@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('meta_title', 'Page Title')
+@section('meta_title', $meta_title)
 
 @section('body')
 

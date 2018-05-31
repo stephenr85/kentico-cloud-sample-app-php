@@ -17,6 +17,7 @@ class HomeController extends Controller
     	$cafes = $homeData->cafes;
 
 		$viewData = [
+			'meta_title' => "Home",
     		'feature_article' => $feature_article,
     		'articles' => $articles,
     		'our_story' => $our_story,

@@ -1,5 +1,6 @@
 @extends('products.detail_layout')
 
+@section('meta_title', $meta_title)
 
 @section('product_description')
 {!! deliver_rich_text($product->longDescription ? $product->longDescription : $product->shortDescription) !!}

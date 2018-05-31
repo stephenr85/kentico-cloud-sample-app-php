@@ -29,6 +29,7 @@ class CafesController extends Controller
 
 
 		$viewData = [
+			'meta_title' => "Cafes",
 			'cafes' => $cafes,
 			'partner_cafes' => $partner_cafes
 		];

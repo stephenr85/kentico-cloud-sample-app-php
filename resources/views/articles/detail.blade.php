@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('meta_title', $meta_title)
 @section('body')
 <article class="article-detail col-lg-9 col-md-12 article-detail-related-box">
     <h2>{{ $article->title }}</h2>

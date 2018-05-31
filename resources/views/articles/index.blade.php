@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('meta_title', $meta_title)
 @section('body')
 
 @if(count($articles) > 0)

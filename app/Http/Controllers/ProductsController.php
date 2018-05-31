@@ -15,7 +15,11 @@ class ProductsController extends Controller
 
 		$product = $client->getItem($slug);
 
+		if ($product == null || empty($product))
+			return view('errors.not-found');
+
 		$viewData = [
+			'meta_title' => $product->productName,
 			'product' => $product
 		];
 

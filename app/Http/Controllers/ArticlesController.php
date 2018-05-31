@@ -15,6 +15,7 @@ class ArticlesController extends Controller
     	]);
 
         $viewData = [
+			'meta_title' => "Articles",
     		'articles' => $articles->items
     	];
 
@@ -26,9 +27,13 @@ class ArticlesController extends Controller
 
     	$article = $client->getItem($slug);
 
-    	$related_articles = $article->relatedArticles;
+		if ($article == null || empty($article))
+			return view('errors.not-found');
 
+		$related_articles = $article->relatedArticles;
+		
     	$viewData = [
+			'meta_title' => $article->title,
     		'article' => $article,
     		'related_articles' => $related_articles
     	];
