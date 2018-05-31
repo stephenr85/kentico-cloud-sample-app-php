@@ -2,7 +2,6 @@
 
 @section('page_title', 'Coffees')
 
-
 @section('body')
 
 

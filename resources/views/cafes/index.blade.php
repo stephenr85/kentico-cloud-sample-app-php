@@ -14,12 +14,12 @@
 <h2>@lang('dancinggoat.PartnerCafes_Title')</h2>
 <div class="row">
     @foreach($partner_cafes as $cafe)
-        <h3>{{ $cafe->getString('city') }}, {{ $cafe->getString('country') }}</h3>
+        <h3>{{ $cafe->city }}, {{ $cafe->country }}</h3>
         <p>
             {{ $cafe->system->name }}, 
-            {{ $cafe->getString('street') }}, 
-            {{ $cafe->getString('street') }}, 
-            {{ $cafe->getString('phone') }}
+            {{ $cafe->street }}, 
+            {{ $cafe->street }}, 
+            {{ $cafe->phone }}
         </p>
     @endforeach
 </div>
