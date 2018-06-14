@@ -3,7 +3,7 @@
  * When serving KenticoCloud PHP Sample Application using `php artisan serve`
  * command, the combination of Laravel (5.3+) and of a package
  * sunra/php-simple-html-dom-parser exhibits an issue where laravel gets stuck
- * in an infinite loop of calls 
+ * in an infinite loop of calls.
  */
 define("PACKAGE_TO_FIX" , "sunra/php-simple-html-dom-parser");
 define("MINIMUM_REQUIRED_LINES_IN_FILE", 1000);

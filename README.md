@@ -12,11 +12,11 @@ There should be PHP7.1 and higher and composer installed in your environment. On
 2. `cd` in the project folder and run `composer update` and `php artisan serve` commands.
 3. Access `127.0.0.1:8000` (default) to browse the application.
 
-### Known issue in PHP v7.1.13
+Alternatively you can also deploy your application to your apache server just by clonning the repository, running composer update and accessing corresponding address on your server.
 
-When using this sample application with PHP v7.1.13, one of the dependencies ([sunra/php-simple-html-dom-parser](https://github.com/sunra/php-simple-html-dom-parser/)) tends to get stuck in an endless loop of calls to its own destructor. It is possible to get around this issue by deleting *__destruct()* method in *simple_html_dom.php:140*, but we do not recommend it.
+### Known issue with some versions of PHP, Laravel and sunra's HTML dom parser
 
-We recommend not using PHP v7.1.13 with this application.
+When using this sample application with some versions of PHP (reproduced on v7.1.13, 7.1.18 and 7.2), one of the dependencies ([sunra/php-simple-html-dom-parser](https://github.com/sunra/php-simple-html-dom-parser/)) tends to get stuck in an endless loop of calls to its own destructor. We worked-around this issue by renaming destructors in fetched dependencies every time they are changed. For futher reference, please see [issue #60 in sunra/php-simple-html-dom-parser repository](https://github.com/sunra/php-simple-html-dom-parser/issues/60).
 
 ## Author
 
