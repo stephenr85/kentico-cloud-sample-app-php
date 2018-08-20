@@ -8,8 +8,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0",
-        "esiteful/kenticocloud-deliver": "master-dev",
-        "fideloper/proxy": "~3.3",
+        "kentico-cloud/delivery-sdk-php": "^1.0.0",
+        "fideloper/proxy": "~4.0",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.5",
@@ -53,7 +53,8 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover"
+            "@php artisan package:discover",
+            "@php Installer.php"
         ]
     },
     "config": {

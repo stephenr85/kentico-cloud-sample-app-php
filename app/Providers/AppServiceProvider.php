@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\View\View;
+use KenticoCloud\Delivery\DeliveryClient;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
         $client = $this->app->make('DeliverClient');
         $homeData = $client->getItem('home');
 
-        view()->share('company_address', $homeData->getString('contact'));
+        view()->share('company_address', $homeData->contact);
 
         view()->share('engage_project_id', 'ace71be0-4898-4e7f-b0b6-f416080e5b8b');
 
@@ -32,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $deliverClient = new \KenticoCloud\Deliver\Client('975bf280-fd91-488c-994c-2f04416e5ee3');
+        $deliverClient = new DeliveryClient('975bf280-fd91-488c-994c-2f04416e5ee3');
         $this->app->instance('DeliverClient', $deliverClient);
     }
 }

@@ -1,9 +1,9 @@
 @extends('products.detail_layout')
 
+@section('meta_title', $meta_title)
 
 @section('product_description')
-
-{!! deliver_rich_text($product->getString('long_description') ? $product->getString('long_description') : $product->getString('short_description')) !!}
+{!! deliver_rich_text($product->longDescription ? $product->longDescription : $product->shortDescription) !!}
                 
 @include('products.coffees._detail_properties', ['product' => $product])
 

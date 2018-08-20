@@ -13,11 +13,13 @@ class ProductsController extends Controller
 	public function detail($slug){
 		$client = app()->make('DeliverClient');
 
-		$product = $client->getItem([
-			'system.codename' => $slug
-		]);
+		$product = $client->getItem($slug);
+
+		if ($product == null || empty($product))
+			return view('errors.not-found');
 
 		$viewData = [
+			'meta_title' => $product->productName,
 			'product' => $product
 		];
 

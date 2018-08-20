@@ -14,8 +14,9 @@ class ArticlesController extends Controller
     		'system.type' => 'article'
     	]);
 
-    	$viewData = [
-    		'articles' => $articles
+        $viewData = [
+			'meta_title' => "Articles",
+    		'articles' => $articles->items
     	];
 
     	return view('articles.index', $viewData);
@@ -26,9 +27,13 @@ class ArticlesController extends Controller
 
     	$article = $client->getItem($slug);
 
-    	$related_articles = $article->getModularContent('related_articles')->getItems();
+		if ($article == null || empty($article))
+			return view('errors.not-found');
 
+		$related_articles = $article->relatedArticles;
+		
     	$viewData = [
+			'meta_title' => $article->title,
     		'article' => $article,
     		'related_articles' => $related_articles
     	];

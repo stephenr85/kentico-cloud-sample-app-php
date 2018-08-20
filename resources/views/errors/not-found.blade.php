@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('Oops! Page not found', 'Page Title')
+@section('meta_title', 'Oops! Page not found')
 
 @section('body')
 
@@ -19,7 +19,7 @@
                 <p>
                     @lang('dancinggoat.NotFound_Instructions')
                 </p>
-                <a href="atUrl.Action("Index", "Home")" class="btn">
+                <a href="{{ route('home') }}" class="btn">
                     @lang('dancinggoat.NotFound_GoHome')
                 </a>
             </div>

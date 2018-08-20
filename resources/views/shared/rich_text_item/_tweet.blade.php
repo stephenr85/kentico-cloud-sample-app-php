@@ -1,1 +1,1 @@
-<div class="tweet__wrapper">{{ $item->getString('tweet_link') }}</div>
+<div class="tweet__wrapper">{{ $item->tweetLink }}</div>

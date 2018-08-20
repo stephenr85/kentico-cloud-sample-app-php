@@ -14,7 +14,8 @@ class BrewersController extends Controller
 		]);
 
 		$viewData = [
-			'products' => $products->getItems(),
+			'meta_title' => "Brewers",
+			'products' => $products->items,
 			'manufacturers' => $client->getTaxonomy('manufacturer'),
 			'product_statuses' => $client->getTaxonomy('product_status')
 		];
@@ -42,7 +43,7 @@ class BrewersController extends Controller
 		$coffees = $client->getItems($params);
 
 		$viewData = [
-			'products' => $coffees->getItems()
+			'products' => $coffees->items
 		];
 
 		return view('products._product_listing', $viewData);

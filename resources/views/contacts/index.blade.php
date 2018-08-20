@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
+@section('meta_title', $meta_title)
 
 @section('body')
 
 <div class="col-md-12">
     <h2 class="contact-title">@lang('dancinggoat.Roastery')</h2>
     <ul class="contact-info">
-        <li><a href="tel:{{ $roastery->getString('phone') }}">{{ $roastery->getString('phone') }}</a></li>
-        <li>{{ $roastery->getString('email') }}</li>
+        <li><a href="tel:{{ $roastery->phone }}">{{ $roastery->phone }}</a></li>
+        <li>{{ $roastery->email }}</li>
         <li>
-            <a href="javascript:void(0)" data-address="{{ $roastery->getString('city') . ', ' . $roastery->getString('street') }}" class="js-scroll-to-map">
-                {{ $roastery->getString('street') }}, {{ $roastery->getString('city') }}<br />
-                {{ $roastery->getString('zip_code') }}, {{ $roastery->getString('country') }}, {{ $roastery->getString('state') }}<br />
+            <a href="javascript:void(0)" data-address="{{ $roastery->city . ', ' . $roastery->street }}" class="js-scroll-to-map">
+                {{ $roastery->street }}, {{ $roastery->city }}<br />
+                {{ $roastery->zipCode }}, {{ $roastery->country }}, {{ $roastery->state }}<br />
         </a>
     </li>
 </ul>
 </div>
-
 
 <div class="row">
 	@foreach($cafes as $cafe)

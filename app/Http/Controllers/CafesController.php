@@ -16,16 +16,20 @@ class CafesController extends Controller
 		$cafes = [];
 		$partner_cafes = [];
 
-		foreach($allCafes as $cafe){
-			if($cafe->getString('country') == 'USA'){
+		foreach($allCafes->items as $cafe){
+			if ($cafe->country == 'USA')
+			{
 				$cafes[] = $cafe;
-			}else{
+			} 
+			else
+			{
 				$partner_cafes[] = $cafe;
 			}
 		}
 
 
 		$viewData = [
+			'meta_title' => "Cafes",
 			'cafes' => $cafes,
 			'partner_cafes' => $partner_cafes
 		];

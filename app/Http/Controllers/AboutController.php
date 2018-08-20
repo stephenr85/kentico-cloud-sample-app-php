@@ -11,8 +11,9 @@ class AboutController extends Controller
     	$aboutData = $client->getItem('about_us');
 
     	$viewData = [
+			'meta_title' => "About us",
     		'about' => $aboutData,
-    		'facts' => $aboutData->getModularContent('facts')->getItems()
+    		'facts' => $aboutData->facts
     	];
 
     	return view('about.index', $viewData);

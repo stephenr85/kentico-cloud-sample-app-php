@@ -12,10 +12,13 @@ class ContactsController extends Controller
 		$cafes = $client->getItems([
 			'system.type' => 'cafe',
 			'elements.country' => 'USA'
-		])->getItems();
+		]);
+		
+		$cafes = $cafes->items;
 
 		$viewData = [
-			'roastery' => $cafes[0],
+			'meta_title' => "Contact",
+			'roastery' => reset($cafes),
 			'cafes' => $cafes
 		];
 
